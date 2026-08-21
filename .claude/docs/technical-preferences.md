@@ -5,10 +5,10 @@
 
 ## Engine & Language
 
-- **Engine**: [TO BE CONFIGURED — run /setup-engine]
-- **Language**: [TO BE CONFIGURED]
-- **Rendering**: [TO BE CONFIGURED]
-- **Physics**: [TO BE CONFIGURED]
+- **Engine**: Godot 4.6
+- **Language**: GDScript (default — revisit if performance-critical systems need C#)
+- **Rendering**: Forward+ (Godot 4.6 default), URP-equivalent budget for a stylized 2D/3D farming sim
+- **Physics**: Jolt (Godot 4.6 default physics engine)
 
 ## Input & Platform
 
@@ -65,12 +65,12 @@
 <!-- Read by /code-review, /architecture-decision, /architecture-review, and team skills -->
 <!-- to know which specialist to spawn for engine-specific validation. -->
 
-- **Primary**: [TO BE CONFIGURED — run /setup-engine]
-- **Language/Code Specialist**: [TO BE CONFIGURED]
-- **Shader Specialist**: [TO BE CONFIGURED]
-- **UI Specialist**: [TO BE CONFIGURED]
-- **Additional Specialists**: [TO BE CONFIGURED]
-- **Routing Notes**: [TO BE CONFIGURED]
+- **Primary**: godot-specialist
+- **Language/Code Specialist**: godot-gdscript-specialist (godot-csharp-specialist if C# is adopted)
+- **Shader Specialist**: godot-shader-specialist
+- **UI Specialist**: ui-programmer (Godot Control nodes/themes), escalate to godot-specialist for node/scene architecture calls
+- **Additional Specialists**: godot-gdextension-specialist (native C++/Rust bindings, only if a system needs GDExtension)
+- **Routing Notes**: No dedicated Godot UI sub-specialist exists — UI implementation routes to `ui-programmer`, with `godot-specialist` consulted for Control-node/theme architecture decisions.
 
 ### File Extension Routing
 
@@ -79,9 +79,10 @@
 
 | File Extension / Type | Specialist to Spawn |
 |-----------------------|---------------------|
-| Game code (primary language) | [TO BE CONFIGURED] |
-| Shader / material files | [TO BE CONFIGURED] |
-| UI / screen files | [TO BE CONFIGURED] |
-| Scene / prefab / level files | [TO BE CONFIGURED] |
-| Native extension / plugin files | [TO BE CONFIGURED] |
+| Game code (`.gd`) | godot-gdscript-specialist |
+| Game code (`.cs`, if adopted) | godot-csharp-specialist |
+| Shader / material files (`.gdshader`) | godot-shader-specialist |
+| UI / screen files | ui-programmer |
+| Scene / prefab / level files (`.tscn`, `.tres`) | godot-specialist |
+| Native extension / plugin files (GDExtension, C++/Rust) | godot-gdextension-specialist |
 | General architecture review | Primary |

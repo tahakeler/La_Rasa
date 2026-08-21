@@ -69,9 +69,7 @@ For Logic and Integration stories, you write the test file (or scaffold it for t
 **Test naming convention**: `[system]_[feature]_test.[ext]`
 **Test function naming**: `test_[scenario]_[expected]`
 
-**Pattern per engine:**
-
-#### Godot (GDScript / GdUnit4)
+**Pattern (Godot / GdUnit4):**
 
 ```gdscript
 extends GdUnitTestSuite
@@ -87,47 +85,8 @@ func test_[scenario]_[expected]() -> void:
     assert_that(result).is_equal([expected])
 ```
 
-#### Unity (C# / NUnit)
-
-```csharp
-[TestFixture]
-public class [SystemName]Tests
-{
-    [Test]
-    public void [Scenario]_[Expected]()
-    {
-        // Arrange
-        var subject = new [ClassName]();
-
-        // Act
-        var result = subject.[Method]([args]);
-
-        // Assert
-        Assert.AreEqual([expected], result, delta: 0.001f);
-    }
-}
-```
-
-#### Unreal (C++)
-
-```cpp
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(
-    F[SystemName]Test,
-    "MyGame.[System].[Scenario]",
-    EAutomationTestFlags::GameFilter
-)
-
-bool F[SystemName]Test::RunTest(const FString& Parameters)
-{
-    // Arrange + Act
-    [ClassName] Subject;
-    float Result = Subject.[Method]([args]);
-
-    // Assert
-    TestEqual("[description]", Result, [expected]);
-    return true;
-}
-```
+If a system is implemented in C# (via `godot-csharp-specialist`), use GdUnit4's
+C# test API with the same Arrange/Act/Assert structure instead.
 
 **What to test for every Logic story formula:**
 1. Normal case (typical inputs → expected output)
