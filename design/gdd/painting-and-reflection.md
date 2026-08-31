@@ -32,7 +32,7 @@ whole document, which is appropriate given its stated importance.
 Quiet, attentive intimacy without words — the satisfaction of correctly
 reading someone, and watching a portrait resolve into something true.
 
-## Detailed Design
+## Detailed Rules
 
 ### Core Rules — Sleep Screen
 

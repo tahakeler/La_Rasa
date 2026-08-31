@@ -33,7 +33,7 @@ portraits are finished, their commonalities recontextualize the whole cast.
 The accumulating pleasure of pattern-recognition across twelve independent
 relationships, paying off in a way only visible in hindsight.
 
-## Detailed Design
+## Detailed Rules
 
 ### Core Rules
 

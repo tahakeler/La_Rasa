@@ -30,7 +30,7 @@ A day that feels complete but tight — "a bit less room and a bit more
 choosing," per the source GDD. The player should feel like every day has
 real opportunity cost, not enough time to do everything.
 
-## Detailed Design
+## Detailed Rules
 
 ### Core Rules
 

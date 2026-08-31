@@ -32,7 +32,7 @@ Getting to know someone as more than their surface — the pleasure of an
 early read turning out to be incomplete, and eventually understanding what
 someone couldn't say to your face.
 
-## Detailed Design
+## Detailed Rules
 
 ### Core Rules
 

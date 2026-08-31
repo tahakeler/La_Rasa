@@ -33,7 +33,7 @@ nothing novel is claimed here by design; the source GDD is explicit that
 this system should feel like genre baseline, freeing player attention for
 the game's actual differentiators.
 
-## Detailed Design
+## Detailed Rules
 
 ### Core Rules
 

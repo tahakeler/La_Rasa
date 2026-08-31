@@ -30,7 +30,7 @@ channel.
 A world that sounds coherent as you move through it, and where correctly
 understanding a person is something you can hear as well as see.
 
-## Detailed Design
+## Detailed Rules
 
 ### Core Rules
 

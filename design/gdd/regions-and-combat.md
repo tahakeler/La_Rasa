@@ -33,7 +33,7 @@ sword).
 
 Not yet definable — depends entirely on the combat concept decision below.
 
-## Detailed Design
+## Detailed Rules
 
 ### Core Rules — Fixed Structure
 

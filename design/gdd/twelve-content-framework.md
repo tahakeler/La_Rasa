@@ -32,7 +32,7 @@ mechanic the player interacts with as such. Its effect on player experience
 is coherence: every system in the game feels like it belongs to the same
 world because it's built from the same twelve-position structure.
 
-## Detailed Design
+## Detailed Rules
 
 ### Core Rules
 
