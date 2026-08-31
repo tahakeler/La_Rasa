@@ -25,32 +25,173 @@
 # STATUS VALUES: active | deprecated | superseded-by: TR-[system]-NNN
 
 version: 1
-last_updated: ""
+last_updated: "2026-08-31"
 
-requirements: []
+requirements:
+  - id: TR-twelve-001
+    system: twelve-content-framework
+    gdd: design/gdd/twelve-content-framework.md
+    requirement: "All twelve archetype positions implemented as a single data asset referenced (not duplicated) by other systems"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-twelve-002
+    system: twelve-content-framework
+    gdd: design/gdd/twelve-content-framework.md
+    requirement: "No hardcoded archetype/color/key values exist outside the canonical data asset"
+    created: 2026-08-31
+    revised: ""
+    status: active
 
-# --- EXAMPLE ENTRIES (remove when first real entries are added) ---
-#
-# - id: TR-combat-001
-#   system: combat
-#   gdd: design/gdd/combat-system.md
-#   requirement: "Player takes damage from enemies based on attack power minus defence"
-#   created: 2026-03-10
-#   revised: ""
-#   status: active
-#
-# - id: TR-combat-002
-#   system: combat
-#   gdd: design/gdd/combat-system.md
-#   requirement: "Combo window timing is 0.4 seconds between hits"
-#   created: 2026-03-10
-#   revised: "2026-04-01"
-#   status: active
-#
-# - id: TR-combat-003
-#   system: combat
-#   gdd: design/gdd/combat-system.md
-#   requirement: "Old damage formula using raw stats"
-#   created: 2026-03-10
-#   revised: ""
-#   status: superseded-by: TR-combat-001
+  - id: TR-daily-001
+    system: daily-loop-and-calendar
+    gdd: design/gdd/daily-loop-and-calendar.md
+    requirement: "In-game day runs 06:00-18:00 with wake/farm/town-or-region/process/ship/sleep beat structure"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-daily-002
+    system: daily-loop-and-calendar
+    gdd: design/gdd/daily-loop-and-calendar.md
+    requirement: "Calendar computes 144 days/year, 36 days/season (12 hours/day, 12 days/month, 12 months/year)"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-daily-003
+    system: daily-loop-and-calendar
+    gdd: design/gdd/daily-loop-and-calendar.md
+    requirement: "Winter maintains plantable crops (does not go dead per genre norm)"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-daily-004
+    system: daily-loop-and-calendar
+    gdd: design/gdd/daily-loop-and-calendar.md
+    requirement: "Sleep checks for lit portraits and branches to reflection scene or ends the day"
+    created: 2026-08-31
+    revised: ""
+    status: active
+
+  - id: TR-farm-001
+    system: farm-and-economy
+    gdd: design/gdd/farm-and-economy.md
+    requirement: "All twelve items exist per farm content category, split per the source inventory (3-per-season, region-gated, etc.)"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-farm-002
+    system: farm-and-economy
+    gdd: design/gdd/farm-and-economy.md
+    requirement: "Flower milling produces a paint resource consumed by the Reflection & Painting Scene system"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-farm-003
+    system: farm-and-economy
+    gdd: design/gdd/farm-and-economy.md
+    requirement: "Crafting/inventory UI slot counts are multiples of twelve"
+    created: 2026-08-31
+    revised: ""
+    status: active
+
+  - id: TR-villager-001
+    system: villager-archetype-system
+    gdd: design/gdd/villager-archetype-system.md
+    requirement: "All twelve villagers implemented with distinct persona content that stands alone as coherent without shadow content"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-villager-002
+    system: villager-archetype-system
+    gdd: design/gdd/villager-archetype-system.md
+    requirement: "Shadow content never appears in daytime dialogue, verified by content audit"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-villager-003
+    system: villager-archetype-system
+    gdd: design/gdd/villager-archetype-system.md
+    requirement: "Portrait stage state persists per villager and correctly gates reveal content (early/middle/late/finished)"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-villager-004
+    system: villager-archetype-system
+    gdd: design/gdd/villager-archetype-system.md
+    requirement: "All twelve villagers are romanceable with functioning relationship hearts"
+    created: 2026-08-31
+    revised: ""
+    status: active
+
+  - id: TR-painting-001
+    system: painting-and-reflection
+    gdd: design/gdd/painting-and-reflection.md
+    requirement: "Sleep screen shows lit/greyed portraits correctly based on daily story-movement state"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-painting-002
+    system: painting-and-reflection
+    gdd: design/gdd/painting-and-reflection.md
+    requirement: "Painting scene twin-stick input reads correctly against ground-truth villager emotional state"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-painting-003
+    system: painting-and-reflection
+    gdd: design/gdd/painting-and-reflection.md
+    requirement: "Correct/incorrect reads produce distinct diegetic feedback (colour/sound/canvas) with no numeric score or bar"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-painting-004
+    system: painting-and-reflection
+    gdd: design/gdd/painting-and-reflection.md
+    requirement: "A single-input accessibility mode exists and is fully playable"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-painting-005
+    system: painting-and-reflection
+    gdd: design/gdd/painting-and-reflection.md
+    requirement: "Scene is completable using audio feedback alone (playable by ear)"
+    created: 2026-08-31
+    revised: ""
+    status: active
+
+  - id: TR-sound-001
+    system: sound-and-crossfade
+    gdd: design/gdd/sound-and-crossfade.md
+    requirement: "All twelve zone tracks implemented in their assigned key"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-sound-002
+    system: sound-and-crossfade
+    gdd: design/gdd/sound-and-crossfade.md
+    requirement: "Zone-boundary crossfades are beat-matched, never landing mid-phrase"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-sound-003
+    system: sound-and-crossfade
+    gdd: design/gdd/sound-and-crossfade.md
+    requirement: "Painting-scene key resolution responds live to read accuracy"
+    created: 2026-08-31
+    revised: ""
+    status: active
+
+  - id: TR-narrative-001
+    system: narrative-portrait-system
+    gdd: design/gdd/narrative-portrait-system.md
+    requirement: "All twelve villagers have complete early/middle/late/finished portrait content"
+    created: 2026-08-31
+    revised: ""
+    status: active
+  - id: TR-narrative-002
+    system: narrative-portrait-system
+    gdd: design/gdd/narrative-portrait-system.md
+    requirement: "Repeated cross-portrait details are planned and consistent across all twelve artworks before final painting"
+    created: 2026-08-31
+    revised: ""
+    status: active
