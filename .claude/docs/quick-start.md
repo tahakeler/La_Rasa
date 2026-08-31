@@ -5,7 +5,7 @@
 This is a complete Claude Code agent architecture for game development. It
 organizes 39 specialized AI agents into a studio hierarchy that mirrors
 real game development teams, with defined responsibilities, delegation
-rules, and coordination protocols. It includes a Godot 4 engine-specialist
+rules, and coordination protocols. It includes a Unity engine-specialist
 lead with dedicated sub-specialists for major engine subsystems. All design
 agents and templates are grounded in established game design theory (MDA
 Framework, Self-Determination Theory, Flow State, Bartle Player Types).
@@ -52,11 +52,11 @@ Ask yourself: "What department would handle this in a real studio?"
 | Test a mechanic idea quickly | `prototyper` |
 | Review code for security issues | `security-engineer` |
 | Check accessibility compliance | `accessibility-specialist` |
-| Get Godot advice | `godot-specialist` |
-| Write idiomatic GDScript | `godot-gdscript-specialist` |
-| Write Godot C# code | `godot-csharp-specialist` |
-| Create Godot shaders | `godot-shader-specialist` |
-| Build GDExtension modules | `godot-gdextension-specialist` |
+| Get Unity advice | `unity-specialist` |
+| Design DOTS/ECS architecture | `unity-dots-specialist` |
+| Write Unity shaders/VFX | `unity-shader-specialist` |
+| Manage Addressable assets | `unity-addressables-specialist` |
+| Build UI Toolkit/UGUI screens | `unity-ui-specialist` |
 | Plan live events and seasons | `live-ops-designer` |
 | Write patch notes for players | `community-manager` |
 | Brainstorm a new game idea | Use `/brainstorm` skill |

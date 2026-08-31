@@ -74,6 +74,12 @@ Before writing any code:
    retention policy, and distribution to testers.
 6. **Environment Management**: Maintain development, staging, and production
    environment configurations.
+7. **Unity CLI in CI**: Use the `unity` CLI (experimental, launched 2026-07-20)
+   for headless installs, builds, and test runs in pipelines —
+   `unity install`, `unity open`, and the `com.unity.pipeline` package's
+   `unity command` bridge. See `.claude/docs/unity-cli-integration.md`
+   before wiring it into a pipeline; verify current syntax against
+   Unity's live docs since this shipped after training data cutoffs.
 
 ### Branching Strategy
 

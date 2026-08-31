@@ -5,10 +5,10 @@
 
 ## Engine & Language
 
-- **Engine**: Godot 4.6
-- **Language**: GDScript (default — revisit if performance-critical systems need C#)
-- **Rendering**: Forward+ (Godot 4.6 default), URP-equivalent budget for a stylized 2D/3D farming sim
-- **Physics**: Jolt (Godot 4.6 default physics engine)
+- **Engine**: Unity 6.3 LTS
+- **Language**: C#
+- **Rendering**: URP (Universal Render Pipeline) — appropriate budget for a stylized 2D/3D farming sim
+- **Physics**: PhysX 5.1 (Unity 6.3 default)
 
 ## Input & Platform
 
@@ -65,12 +65,12 @@
 <!-- Read by /code-review, /architecture-decision, /architecture-review, and team skills -->
 <!-- to know which specialist to spawn for engine-specific validation. -->
 
-- **Primary**: godot-specialist
-- **Language/Code Specialist**: godot-gdscript-specialist (godot-csharp-specialist if C# is adopted)
-- **Shader Specialist**: godot-shader-specialist
-- **UI Specialist**: ui-programmer (Godot Control nodes/themes), escalate to godot-specialist for node/scene architecture calls
-- **Additional Specialists**: godot-gdextension-specialist (native C++/Rust bindings, only if a system needs GDExtension)
-- **Routing Notes**: No dedicated Godot UI sub-specialist exists — UI implementation routes to `ui-programmer`, with `godot-specialist` consulted for Control-node/theme architecture decisions.
+- **Primary**: unity-specialist
+- **Language/Code Specialist**: unity-specialist (C# review — primary covers it)
+- **Shader Specialist**: unity-shader-specialist (Shader Graph, HLSL, URP customization)
+- **UI Specialist**: unity-ui-specialist (UI Toolkit UXML/USS, UGUI Canvas, runtime UI)
+- **Additional Specialists**: unity-dots-specialist (ECS, Jobs system, Burst compiler), unity-addressables-specialist (asset loading, memory management, content catalogs)
+- **Routing Notes**: `unity-ui-specialist` owns UI implementation directly (unlike the generic `ui-programmer` fallback used for engines without a dedicated UI sub-specialist).
 
 ### File Extension Routing
 
@@ -79,10 +79,9 @@
 
 | File Extension / Type | Specialist to Spawn |
 |-----------------------|---------------------|
-| Game code (`.gd`) | godot-gdscript-specialist |
-| Game code (`.cs`, if adopted) | godot-csharp-specialist |
-| Shader / material files (`.gdshader`) | godot-shader-specialist |
-| UI / screen files | ui-programmer |
-| Scene / prefab / level files (`.tscn`, `.tres`) | godot-specialist |
-| Native extension / plugin files (GDExtension, C++/Rust) | godot-gdextension-specialist |
+| Game code (`.cs`) | unity-specialist |
+| Shader / material files (`.shader`, `.shadergraph`, `.mat`) | unity-shader-specialist |
+| UI / screen files (`.uxml`, `.uss`, Canvas prefabs) | unity-ui-specialist |
+| Scene / prefab / level files (`.unity`, `.prefab`) | unity-specialist |
+| Native extension / plugin files (`.dll`, native plugins) | unity-specialist |
 | General architecture review | Primary |

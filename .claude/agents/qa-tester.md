@@ -69,24 +69,26 @@ For Logic and Integration stories, you write the test file (or scaffold it for t
 **Test naming convention**: `[system]_[feature]_test.[ext]`
 **Test function naming**: `test_[scenario]_[expected]`
 
-**Pattern (Godot / GdUnit4):**
+**Pattern (Unity / NUnit):**
 
-```gdscript
-extends GdUnitTestSuite
+```csharp
+[TestFixture]
+public class [SystemName]Tests
+{
+    [Test]
+    public void [Scenario]_[Expected]()
+    {
+        // Arrange
+        var subject = new [ClassName]();
 
-func test_[scenario]_[expected]() -> void:
-    # Arrange
-    var subject = [ClassName].new()
+        // Act
+        var result = subject.[Method]([args]);
 
-    # Act
-    var result = subject.[method]([args])
-
-    # Assert
-    assert_that(result).is_equal([expected])
+        // Assert
+        Assert.AreEqual([expected], result, delta: 0.001f);
+    }
+}
 ```
-
-If a system is implemented in C# (via `godot-csharp-specialist`), use GdUnit4's
-C# test API with the same Arrange/Act/Assert structure instead.
 
 **What to test for every Logic story formula:**
 1. Normal case (typical inputs → expected output)
