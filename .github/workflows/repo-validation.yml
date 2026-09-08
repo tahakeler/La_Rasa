@@ -1,0 +1,66 @@
+name: Repo Validation
+
+# Fast, no-secrets checks that run on every push/PR. Catches broken JSON,
+# malformed agent/skill frontmatter, and non-POSIX hook scripts before they
+# reach main. The heavy Unity test gate is unity-tests.yml.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: JSON is well-formed
+        run: |
+          set -e
+          fail=0
+          while IFS= read -r f; do
+            if ! jq -e . "$f" >/dev/null 2>&1; then
+              echo "::error file=$f::invalid JSON"
+              fail=1
+            fi
+          done < <(git ls-files '*.json' ':!:*.mcp.json.example')
+          exit $fail
+
+      - name: Agent + skill files have YAML frontmatter
+        run: |
+          set -e
+          fail=0
+          while IFS= read -r f; do
+            first=$(head -n1 "$f")
+            if [ "$first" != "---" ]; then
+              echo "::error file=$f::missing '---' frontmatter opener"
+              fail=1
+            fi
+          done < <(git ls-files '.claude/agents/*.md' '.claude/skills/*/SKILL.md')
+          exit $fail
+
+      - name: Hook scripts parse as bash
+        run: |
+          set -e
+          fail=0
+          while IFS= read -r f; do
+            if ! bash -n "$f"; then
+              echo "::error file=$f::bash syntax error"
+              fail=1
+            fi
+          done < <(git ls-files '.claude/hooks/*.sh' 'tools/**/*.sh')
+          exit $fail
+
+      - name: GDDs have the 8 required sections
+        run: |
+          set -e
+          fail=0
+          for f in $(git ls-files 'design/gdd/*.md'); do
+            case "$f" in */systems-index.md|*/game-concept.md) continue;; esac
+            for s in "Overview" "Player Fantasy" "Detailed Rules" "Formulas" "Edge Cases" "Dependencies" "Tuning Knobs" "Acceptance Criteria"; do
+              grep -qi "$s" "$f" || { echo "::warning file=$f::missing section '$s'"; }
+            done
+          done
+          exit $fail

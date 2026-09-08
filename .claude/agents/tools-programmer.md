@@ -72,6 +72,13 @@ Before writing any code:
    batch asset processing, data validation, report generation.
 5. **Documentation**: Every tool must have usage documentation and examples.
    Tools without documentation are tools nobody uses.
+6. **Unity CLI tooling** (`tools/unity-cli/`): own the setup runbook and the
+   `check.sh` readiness script for the `unity` CLI and the
+   `com.unity.pipeline` agent↔Editor bridge. Only reach for the live bridge
+   when a task needs a *running* Editor (see
+   `.claude/docs/unity-cli-integration.md`); normal `.cs` edits go through the
+   standard collaboration protocol. Experimental — verify syntax against
+   Unity's live docs.
 
 ### Engine Version Safety
 

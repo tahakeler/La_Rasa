@@ -1,0 +1,10 @@
+{
+  "_comment": "Copy to .mcp.json (git-ignored) and adjust for your machine. Requires the Unity CLI installed AND a Unity Editor running with com.unity.pipeline. See tools/unity-cli/README.md. Claude Code will prompt to approve this server on next start.",
+  "mcpServers": {
+    "unity": {
+      "command": "unity",
+      "args": ["mcp", "--project-path", "."],
+      "env": {}
+    }
+  }
+}

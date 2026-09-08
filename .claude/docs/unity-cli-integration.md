@@ -1,10 +1,12 @@
 # Unity CLI — Agent-Editor Integration
 
-<!-- Written 2026-08-31. Unity CLI is a NEW, EXPERIMENTAL feature (announced
-2026-07-20 at Unite Seoul) — it postdates this framework's Godot-era docs and
-the model's training cutoff. Re-verify against Unity's live docs
-(https://docs.unity.com/en-us/unity-cli) before depending on it for anything
-blocking; syntax and availability may have changed since this was written. -->
+<!-- Written 2026-08-31. Setup section + local-status table added 2026-09-08.
+Unity CLI is a NEW, EXPERIMENTAL feature (announced 2026-07-20 at Unite
+Seoul) — it postdates this framework's Godot-era docs and the model's
+training cutoff. Command syntax below has NOT been re-verified against a live
+install in this repo (the CLI isn't installed yet). Re-verify against Unity's
+live docs (https://docs.unity.com/en-us/unity-cli) before depending on it for
+anything blocking. -->
 
 ## What it is
 
@@ -77,6 +79,34 @@ brew install --cask unity-cli
 # Windows (winget)
 winget install Unity.CLI
 ```
+
+## Setup in this repo
+
+A runbook and a read-only readiness check now live at `tools/unity-cli/`:
+
+- `tools/unity-cli/README.md` — install → editor → auth → headless tests →
+  the `com.unity.pipeline` live bridge → Claude Code MCP mode, step by step.
+- `tools/unity-cli/check.sh` — reports what's installed / authenticated /
+  missing. Changes nothing.
+- `.mcp.json.example` (repo root) — copy to `.mcp.json` (git-ignored) to wire
+  MCP mode into Claude Code.
+- `.github/workflows/unity-tests.yml` — the authoritative CI test gate
+  (`game-ci/unity-test-runner`); the `unity` CLI is the experimental local
+  equivalent.
+
+### Local status — last checked 2026-09-08
+
+| Piece | Status |
+|-------|--------|
+| `unity` CLI installed | **No** — the automated installer was blocked by a sandbox policy; install it manually per the runbook |
+| 6.3 LTS editor | No |
+| `unity auth` | No |
+| `com.unity.pipeline` in project | No |
+| MCP mode wired | No — `.mcp.json.example` provided, not activated |
+
+Nothing here is blocking for the current work: the Twelve Content Framework
+code is plain file edits reviewed the normal way. The CLI matters once
+someone needs to compile/run the project (`S1-003`) or drive a live Editor.
 
 ## Which of our agents use this
 
