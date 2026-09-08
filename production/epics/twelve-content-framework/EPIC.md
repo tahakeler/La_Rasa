@@ -3,8 +3,8 @@
 > **Layer**: Foundation
 > **GDD**: design/gdd/twelve-content-framework.md
 > **Architecture Module**: ArchetypeWheel data architecture
-> **Status**: Ready
-> **Stories**: Not yet created — run `/create-stories twelve-content-framework`
+> **Status**: In Progress
+> **Stories**: 3 created (see table below)
 
 ## Overview
 
@@ -36,7 +36,21 @@ This epic is complete when:
 - No dependent epic (villagers, daily loop, sound) has started implementation
   before this epic reaches Done — everything else references this data
 
+## Stories
+
+| # | Story | Type | Status | ADR |
+|---|-------|------|--------|-----|
+| 001 | ArchetypeWheel data asset and accessor API | Logic | In Progress | ADR-0001 |
+| 002 | Wheel structural validation and loud authoring-time failure | Logic | In Progress | ADR-0001 |
+| 003 | "No hardcoded content values" guardrail | Integration | Ready | ADR-0001 |
+
+Stories 001 and 002 have code + EditMode tests drafted on branch
+`catchup/unity-cli-and-sprint-1`. They are blocked on `S1-003` (a Unity
+Editor to compile and run them) before they can move to Done via
+`/story-done`.
+
 ## Next Step
 
-Run `/create-stories twelve-content-framework` to break this epic into
-implementable stories.
+Complete `S1-003` (Editor verification — see `Assets/LaRasa/README.md`), then
+run `/story-readiness` → `/dev-story` → `/story-done` on stories 001-003 in
+order.

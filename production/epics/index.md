@@ -5,7 +5,7 @@ Engine: Unity 6.3 LTS
 
 | Epic | Layer | System | GDD | Stories | Status |
 |------|-------|--------|-----|---------|--------|
-| Twelve Content Framework | Foundation | twelve-content-framework | `design/gdd/twelve-content-framework.md` | Not yet created | Ready |
+| Twelve Content Framework | Foundation | twelve-content-framework | `design/gdd/twelve-content-framework.md` | 3 stories | In Progress (code drafted, blocked on S1-003 Editor verification) |
 | Daily Loop & Calendar | Core | daily-loop-and-calendar | `design/gdd/daily-loop-and-calendar.md` | Not yet created | Ready (untraced requirements) |
 | Farm & Economy | Feature | farm-and-economy | `design/gdd/farm-and-economy.md` | Not yet created | Ready (untraced requirements) |
 | Villager Archetype System | Core | villager-archetype-system | `design/gdd/villager-archetype-system.md` | Not yet created | Ready (blocked on vertical-slice villager selection) |
