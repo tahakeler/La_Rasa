@@ -226,6 +226,6 @@ impact-based), but confirm with `game-designer` once prototyped.
 |----------|-------|----------|------------|
 | **Is this mechanic fun in isolation?** | `game-designer`, `prototyper` | Immediately — via `/prototype` | This is the single highest-priority open question in the entire GDD |
 | Quantified read-accuracy formula | `systems-designer` | During/after prototype | — |
-| Portrait lit decay: indefinite vs. decay | `game-designer` | Before Alpha | Source GDD suggests trying both |
+| Portrait lit decay: indefinite vs. decay | `game-designer` | Before Alpha | Options drafted 2026-09-08 → `design/decisions/portrait-lit-decay.md`. No call made. |
 | Does paint/flower resource gate sessions, and how? | `economy-designer`, `game-designer` | Before implementation | — |
 | Mid-session read correction behavior (moving average vs. final read) | `systems-designer` | Before implementation | — |

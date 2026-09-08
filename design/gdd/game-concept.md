@@ -220,10 +220,10 @@ daytime dialogue, it belongs in the painting scene instead.
 ### Open Questions (from source GDD, owners as stated there)
 | Question | Owner | Notes |
 | ---- | ---- | ---- |
-| Combat concept (paint-as-resource vs. regions being "in her head") | Luka, Oasis | Structural decision — blocks region/enemy implementation |
-| Vertical-slice zone contiguity vs. season-mapping | Non, Jack (archetype division) | The proposed season split (spring at wheel positions 1/5/9) isn't contiguous, but the 3-zone slice needs adjacent zones for crossfades to be tested |
-| Portrait decay vs. indefinite lit state | Unassigned in source GDD | Indefinite is kinder; decay adds weight — GDD says "worth trying both" |
-| Major vs. minor key per zone | Ken | All-major reads uniformly cheerful per source GDD's own note |
+| Combat concept (paint-as-resource vs. regions being "in her head") | Luka, Oasis | Structural decision — blocks region/enemy implementation. Options: `design/decisions/combat-concept.md` (2026-09-08, no call made) |
+| Vertical-slice zone contiguity vs. season-mapping | Non, Jack (archetype division) | The proposed season split (spring at wheel positions 1/5/9) isn't contiguous, but the 3-zone slice needs adjacent zones for crossfades to be tested. Options: `design/decisions/vertical-slice-villager-selection.md` (2026-09-08, no call made) |
+| Portrait decay vs. indefinite lit state | Unassigned in source GDD | Indefinite is kinder; decay adds weight — GDD says "worth trying both". Options: `design/decisions/portrait-lit-decay.md` (2026-09-08, no call made) |
+| Major vs. minor key per zone | Ken | All-major reads uniformly cheerful per source GDD's own note. Options: `design/decisions/zone-key-major-minor.md` (2026-09-08, no call made) |
 
 ---
 

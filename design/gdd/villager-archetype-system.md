@@ -146,6 +146,6 @@ interacts with this content.
 
 | Question | Owner | Deadline | Resolution |
 |----------|-------|----------|------------|
-| Which 3 villagers are in the vertical slice, and are their wheel positions contiguous? | Non, Jack | Before archetype division work starts — this is the zone-contiguity decision flagged in `game-concept.md` | — |
+| Which 3 villagers are in the vertical slice, and are their wheel positions contiguous? | Non, Jack | Before archetype division work starts — this is the zone-contiguity decision flagged in `game-concept.md` | Options drafted 2026-09-08 → `design/decisions/vertical-slice-villager-selection.md`. No call made. |
 | Sessions-per-portrait-stage thresholds | `narrative-director`, `systems-designer` | Before Reflection & Painting Scene implementation | — |
 | Relationship-heart gain formula (what actions advance a relationship, by how much) | `economy-designer` or `systems-designer` | Before implementation | — |

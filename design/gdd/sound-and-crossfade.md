@@ -130,6 +130,6 @@ in-game jukebox mentioned, though one could be considered later).
 
 | Question | Owner | Deadline | Resolution |
 |----------|-------|----------|------------|
-| Major vs. minor per zone | Ken | Before full-track production begins | Source GDD suggests some minor keys for texture |
+| Major vs. minor per zone | Ken | Before full-track production begins | Options drafted 2026-09-08 → `design/decisions/zone-key-major-minor.md`. No call made. |
 | Crossfade debounce/hysteresis behavior on rapid boundary crossing | `audio-director`, `unity-specialist` | Before implementation | — |
-| Technical approach: Unity's native audio system vs. middleware (e.g., FMOD/Wwise) for beat-matched crossfades | `audio-director`, `technical-director` | Before implementation — flagged as a real technical risk in `systems-index.md` | — |
+| Technical approach: Unity's native audio system vs. middleware (e.g., FMOD/Wwise) for beat-matched crossfades | `audio-director`, `technical-director` | Before implementation — flagged as a real technical risk in `systems-index.md` | Options drafted 2026-09-08 → `design/decisions/audio-technical-approach.md` (A: native / B: FMOD / C: Wwise / D: native now, revisit). No call made. |

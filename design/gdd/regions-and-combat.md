@@ -137,5 +137,5 @@ treat as complete:
 
 | Question | Owner | Deadline | Resolution |
 |----------|-------|----------|------------|
-| **Combat concept** — paint-as-resource vs. "regions in her head" vs. a third direction | Luka, Oasis | This is a Week-1 blocking decision — nothing else in this document can proceed until it's resolved | — |
+| **Combat concept** — paint-as-resource vs. "regions in her head" vs. a third direction | Luka, Oasis | This is a Week-1 blocking decision — nothing else in this document can proceed until it's resolved | Options drafted 2026-09-08 → `design/decisions/combat-concept.md` (A: paint-as-resource / B: in-her-head / C: fold into gathering / D: defer). No call made. |
 | Final region names/themes (currently first-draft placeholders) | `game-designer`, `narrative-director` | Before Alpha content production | — |
