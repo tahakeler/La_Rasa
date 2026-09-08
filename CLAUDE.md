@@ -58,6 +58,10 @@ Every task follows: **Question -> Options -> Decision -> Draft -> Approval**
 
 See `docs/COLLABORATIVE-DESIGN-PRINCIPLE.md` for full protocol and examples.
 
+> **Team members:** `docs/TEAM-HANDBOOK.md` is the entry point — setup per role,
+> how to use the agents and slash commands, the dev workflow, Unity + Git
+> rules, and the repo-structure rationale. Per-person pages: `docs/onboarding/`.
+
 > **First session?** If the project has no engine configured and no game concept,
 > run `/start` to begin the guided onboarding flow.
 

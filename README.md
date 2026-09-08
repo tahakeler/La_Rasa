@@ -88,6 +88,12 @@ Full map: `.claude/docs/directory-structure.md`.
 
 ## How the team works
 
+**Start here: [`docs/TEAM-HANDBOOK.md`](docs/TEAM-HANDBOOK.md)** — setup (per
+role), how to talk to the agents, the command reference, the dev workflow,
+Unity + Git rules, and where the game code lives. New teammates: the
+15-minute version is [`docs/team-setup-guide.md`](docs/team-setup-guide.md);
+your personalised page is in [`docs/onboarding/`](docs/onboarding/).
+
 **User-driven, not autonomous.** Every task runs
 **Question → Options → Decision → Draft → Approval**. Agents ask before writing
 files; nothing merges without a person. See

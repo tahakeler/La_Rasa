@@ -17,7 +17,7 @@ Read the relevant agent definition from `.claude/agents/` if a specific role is 
 
 ## Phase 2: Scan Relevant Area
 
-- For programmers: scan `src/` for architecture, patterns, key files
+- For programmers: scan `Assets/LaRasa/Scripts/` for architecture, patterns, key files (this is a Unity project — game code lives under `Assets/`, not `src/`)
 - For designers: scan `design/` for existing design documents
 - For narrative: scan `design/narrative/` for world-building and story docs
 - For QA: scan `tests/` for existing test coverage
@@ -81,7 +81,10 @@ Read recent changes (git log if available) to understand current momentum.
 
 Present the onboarding document to the user.
 
-Ask: "May I write this to `production/onboarding/onboard-[role]-[date].md`?"
+Ask: "May I write this to `docs/onboarding/[role].md`?" (This project keeps
+hand-written per-teammate onboarding pages there — see `docs/onboarding/README.md`.
+Overwrite the existing page for that role, or add a dated variant if they want
+to keep both.)
 
 If yes, write the file, creating the directory if needed.
 

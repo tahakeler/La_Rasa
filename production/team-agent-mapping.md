@@ -7,6 +7,9 @@ that cover that domain, so everyone knows which agent to reach for. This is
 a starting point, not a constraint — anyone can invoke any agent for any
 task; this just maps the GDD's existing assignments onto the roster.
 
+**See also:** `docs/TEAM-HANDBOOK.md` (setup + workflow + commands),
+`docs/onboarding/<name>.md` (your personalised starting page).
+
 | Person | GDD Role | Relevant Agents |
 |--------|----------|-------------------|
 | **Lala** | Creative lead, painter — twelve portraits, art direction across the whole project | `art-director` (direction questions), `technical-artist` (portrait implementation as game assets), `narrative-director` (portrait content ties into questlines) |
