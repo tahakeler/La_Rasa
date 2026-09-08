@@ -1,8 +1,8 @@
 # Twelve Content Framework
 
-> **Status**: Draft — ingested from GDD v1.3
+> **Status**: Draft — ingested from GDD v1.3 · epic In Progress (`production/epics/twelve-content-framework/`)
 > **Author**: game-designer (ingestion pass)
-> **Last Updated**: 2026-08-31
+> **Last Updated**: 2026-09-08 (implementation status; content unchanged)
 > **Last Verified**: 2026-08-31 against source GDD
 > **Implements Pillar**: Twelve Is the Structure, Not the Content
 

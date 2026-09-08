@@ -28,26 +28,44 @@ before treating the estimates below as commitments.
 
 | ID | Task | Agent/Owner | Est. Days | Dependencies | Acceptance Criteria | Status |
 |----|------|-------------|-----------|---------------|------------------------|--------|
-| S1-001 | Decide combat concept (paint-as-resource vs. "in her head" vs. other) | Luka, Oasis (+ `game-designer`) | 1-2 | None | Decision recorded in `design/gdd/regions-and-combat.md`, Open Questions row resolved | Not Started |
-| S1-002 | Decide vertical-slice villager/zone selection + wheel contiguity | Non, Jack (+ `game-designer`) | 1-2 | None | 3 contiguous wheel positions chosen; `design/gdd/game-concept.md` and `villager-archetype-system.md` Open Questions updated | Not Started |
-| S1-003 | Create a real Unity 6.3 URP 2D project | Whoever picks up `prototypes/painting-scene/` | 0.5 | None | Project opens in Unity Editor; `prototypes/painting-scene/Scripts/ReadAccuracy.cs` compiles inside it | Not Started |
-| S1-004 | Build a minimal playable scene around `ReadAccuracy.cs` (two-stick input, placeholder colour/audio feedback) | `unity-specialist`, `gameplay-programmer` | 2-3 | S1-003 | Scene is playable start-to-finish per `prototypes/painting-scene/BRIEF.md` scope | Not Started |
+| S1-001 | Decide combat concept (paint-as-resource vs. "in her head" vs. other) | Luka, Oasis (+ `game-designer`) | 1-2 | None | Decision recorded in `design/gdd/regions-and-combat.md`, Open Questions row resolved | Options drafted (`design/decisions/combat-concept.md`) — awaiting owners |
+| S1-002 | Decide vertical-slice villager/zone selection + wheel contiguity | Non, Jack (+ `game-designer`) | 1-2 | None | 3 contiguous wheel positions chosen; `design/gdd/game-concept.md` and `villager-archetype-system.md` Open Questions updated | Options drafted (`design/decisions/vertical-slice-villager-selection.md`) — awaiting owners |
+| S1-003 | Create a real Unity 6.3 URP 2D project | Whoever picks up `prototypes/painting-scene/` | 0.5 | None | Project opens in Unity Editor; `prototypes/painting-scene/Scripts/ReadAccuracy.cs` compiles inside it | In Progress — skeleton committed (`Assets/`, `Packages/`, `ProjectSettings/`); needs an Editor to verify (checklist in `Assets/LaRasa/README.md`) |
+| S1-004 | Build a minimal playable scene around `ReadAccuracy.cs` (two-stick input, placeholder colour/audio feedback) | `unity-specialist`, `gameplay-programmer` | 2-3 | S1-003 | Scene is playable start-to-finish per `prototypes/painting-scene/BRIEF.md` scope | Not Started (needs S1-003 Editor pass) |
 | S1-005 | Run at least one playtest session against `prototypes/painting-scene/BRIEF.md` success criteria | `game-designer`, `prototyper` | 1 | S1-004 | PROCEED / PIVOT / KILL verdict recorded in a `REPORT.md` alongside the brief | Not Started |
-| S1-006 | Begin Twelve Content Framework epic implementation | `unity-specialist`, `gameplay-programmer` | 2-3 | S1-003 (needs the Unity project to exist) | `ArchetypeWheel` ScriptableObject implemented per ADR-0001; TR-twelve-001/002 pass | Not Started |
+| S1-006 | Begin Twelve Content Framework epic implementation | `unity-specialist`, `gameplay-programmer` | 2-3 | S1-003 (needs the Unity project to exist) | `ArchetypeWheel` ScriptableObject implemented per ADR-0001; TR-twelve-001/002 pass | In Progress — `ArchetypeWheel` + `CircleOfFifths` + 27 EditMode tests drafted; 3 story files created; blocked on S1-003 to compile/run |
 
 ### Should Have
 
 | ID | Task | Agent/Owner | Est. Days | Dependencies | Acceptance Criteria | Status |
 |----|------|-------------|-----------|---------------|------------------------|--------|
-| S1-010 | Decide portrait lit-decay behavior (indefinite vs. decay) | `game-designer` | 0.5 | None | Decision recorded in `design/gdd/painting-and-reflection.md` Open Questions | Not Started |
-| S1-011 | Decide major/minor key per zone | Ken | 0.5 | None | Decision recorded in `design/gdd/sound-and-crossfade.md` Open Questions | Not Started |
-| S1-012 | Decide audio technical approach (native Unity audio vs. middleware) | Ken, `audio-director`, `technical-director` | 1 | None | ADR written; `production/epics/sound-and-crossfade/EPIC.md` unblocked | Not Started |
+| S1-010 | Decide portrait lit-decay behavior (indefinite vs. decay) | `game-designer` | 0.5 | None | Decision recorded in `design/gdd/painting-and-reflection.md` Open Questions | Options drafted (`design/decisions/portrait-lit-decay.md`) — awaiting owner |
+| S1-011 | Decide major/minor key per zone | Ken | 0.5 | None | Decision recorded in `design/gdd/sound-and-crossfade.md` Open Questions | Options drafted (`design/decisions/zone-key-major-minor.md`) — awaiting Ken |
+| S1-012 | Decide audio technical approach (native Unity audio vs. middleware) | Ken, `audio-director`, `technical-director` | 1 | None | ADR written; `production/epics/sound-and-crossfade/EPIC.md` unblocked | Options drafted (`design/decisions/audio-technical-approach.md`) — awaiting owners |
 
 ### Nice to Have (Cut First)
 
 | ID | Task | Agent/Owner | Est. Days | Dependencies | Acceptance Criteria | Status |
 |----|------|-------------|-----------|---------------|------------------------|--------|
 | S1-020 | Draft economy formulas (crop growth, quality tiers, shipping prices) | `economy-designer` | 1-2 | None | `design/gdd/farm-and-economy.md` Formulas section filled in | Not Started |
+
+## Progress Log
+
+**2026-09-08 — catch-up pass** (branch `catchup/unity-cli-and-sprint-1`):
+
+- **S1-003** moved to In Progress: Unity 6.3 project skeleton committed at repo
+  root. Not yet Editor-verified — see `Assets/LaRasa/README.md`.
+- **S1-006** moved to In Progress: `ArchetypeWheel` / `ArchetypePosition` /
+  `Season` / `CircleOfFifths` implemented per ADR-0001, plus an Editor
+  "Populate Default Wheel" tool. 27 EditMode tests drafted (13 `CircleOfFifths`,
+  14 `ArchetypeWheel`) — cannot run without the Editor. 3 story files created
+  under `production/epics/twelve-content-framework/`.
+- **S1-001 / S1-002 / S1-010 / S1-011 / S1-012**: option docs drafted in
+  `design/decisions/` for the owners to choose from. No decisions made.
+- Added Unity CLI setup tooling (`tools/unity-cli/`) and CI
+  (`.github/workflows/`). Rewrote the top-level README for La Rasa.
+- **Still the critical blocker**: no one has done the S1-003 Editor pass, which
+  gates S1-004, S1-005, S1-006-completion.
 
 ## Carryover from Sprint 0
 

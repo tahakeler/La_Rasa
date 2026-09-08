@@ -25,7 +25,7 @@ palette, and the music.
 
 | # | System Name | Category | Priority | Status | Design Doc | Depends On |
 |---|-------------|----------|----------|--------|------------|------------|
-| 1 | Twelve Content Framework (archetype wheel, data architecture) | Core | MVP | In Design | `design/gdd/twelve-content-framework.md` | None |
+| 1 | Twelve Content Framework (archetype wheel, data architecture) | Core | MVP | In Implementation (code + tests drafted, blocked on S1-003 Editor pass) | `design/gdd/twelve-content-framework.md` | None |
 | 2 | Daily Loop & Calendar | Core | MVP | In Design | `design/gdd/daily-loop-and-calendar.md` | Twelve Content Framework (day/month/year counts) |
 | 3 | Farm & Economy (crops, animals, artisan goods, shipping) | Economy | MVP | In Design | `design/gdd/farm-and-economy.md` | Daily Loop & Calendar |
 | 4 | Villager Archetype System (persona/shadow, twelve villagers) | Narrative | MVP | In Design | `design/gdd/villager-archetype-system.md` | Twelve Content Framework |
