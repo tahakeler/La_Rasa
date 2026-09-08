@@ -229,7 +229,9 @@ open a Pull Request → review → merge to main
 - **Nothing gets decided that isn't yours to decide.** Open decisions live in
   `design/decisions/` with a named owner and a blank `## Decision` section.
 - **Tests are a blocking gate.** Never skip or disable a failing test — fix
-  the cause. CI (`.github/workflows/`) runs on every push and PR.
+  the cause. Run the EditMode suite in Unity's Test Runner before you open a
+  PR. (`repo-validation` CI checks docs/JSON on every push; the Unity test CI
+  is off until it has a license — `tools/unity-cli/README.md`.)
 - **Commit messages:** Conventional Commits (`feat:`, `fix:`, `docs:`, …) and
   reference the story/task ID in the body (`Story: TWELVE-001`).
 
@@ -386,7 +388,7 @@ the same design docs, and the same source of truth.
 | The tool did something without asking | that's a bug — tell Taha; it violates `CLAUDE.md` |
 | Unity: "the type or namespace X could not be found" after pull | someone didn't commit a `.meta` file or `packages-lock.json` — check with them; reimport (`Assets → Reimport All`) |
 | Scene won't merge | Unity Smart Merge (`UnityYAMLMerge`); worst case, one person redoes their scene change |
-| CI is red on `unity-tests` | expected until the `UNITY_LICENSE` / `UNITY_EMAIL` / `UNITY_PASSWORD` secrets are set (Taha) — see `tools/unity-cli/README.md` |
+| Where's the Unity CI? | not active on purpose — it fails red without a Unity license secret. Run tests locally in the Editor's Test Runner. To enable CI later: `tools/unity-cli/README.md`. |
 | "which agent / command do I use?" | just ask the tool in plain English |
 
 Still stuck: ask Taha, or ask Claude Code itself (*"this isn't working, X is

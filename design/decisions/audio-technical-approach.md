@@ -87,8 +87,8 @@ engine, adopt FMOD/Wwise for Alpha before 12-track production starts.
   or buy?
 - Revenue/licence thresholds vs. the project's actual commercial plan
   (`game-concept.md` says monetization is unspecified).
-- CI impact — the `unity-tests.yml` workflow currently assumes a vanilla
-  project.
+- CI impact — if/when Unity CI is enabled (`tools/unity-cli/unity-tests.yml`),
+  middleware adds a plugin the runner has to install.
 
 ## Decision
 

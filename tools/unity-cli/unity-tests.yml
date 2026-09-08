@@ -1,15 +1,16 @@
 name: Unity Tests
 
-# Blocking CI gate per .claude/docs/coding-standards.md:
-# "Automated test suite runs on every push to main and every PR.
-#  No merge if tests fail."
+# NOT ACTIVE. This is a template, kept here on purpose.
 #
-# Requires repo secrets (Settings → Secrets and variables → Actions):
-#   UNITY_LICENSE  - contents of a Unity .ulf license file (activate once locally)
+# To turn on Unity CI: copy this file to `.github/workflows/unity-tests.yml`
+# and add these repo secrets (Settings → Secrets and variables → Actions):
+#   UNITY_LICENSE  - contents of a Unity .ulf license file (see README.md, §3)
 #   UNITY_EMAIL    - Unity account email
 #   UNITY_PASSWORD - Unity account password
-# Until those exist this workflow will fail at the activation step — that is
-# expected; wire the secrets as part of S1-003.
+#
+# It was removed from .github/workflows/ because without the secrets — and
+# without an Editor-verified project — every run fails red. Run the EditMode
+# suite locally in Unity's Test Runner until you're ready to wire this up.
 
 on:
   push:

@@ -29,11 +29,13 @@ and the tests have not been run**. Before relying on it, someone with Unity
 - [ ] Create the canonical data asset: **Assets → Create → LaRasa → Archetype
       Wheel**, name it `ArchetypeWheel`, then **LaRasa → Twelve Content →
       Populate Default Wheel**. Confirm the console reports "Validation passed".
-- [ ] Wire the CI workflow secrets (`UNITY_LICENSE`, `UNITY_EMAIL`,
-      `UNITY_PASSWORD`) so `.github/workflows/unity-tests.yml` runs green.
-
 Once every box is checked, update `production/sprints/sprint-1.md` (`S1-003`)
 and this section.
+
+**Optional, later:** GitHub CI for the test suite. There's no Unity workflow
+active (it fails red without a license secret). To add it: copy
+`tools/unity-cli/unity-tests.yml` into `.github/workflows/` and follow the
+steps in `tools/unity-cli/README.md`. Local Test Runner is the gate until then.
 
 ## Layout
 

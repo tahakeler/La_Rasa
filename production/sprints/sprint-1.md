@@ -62,8 +62,10 @@ before treating the estimates below as commitments.
   under `production/epics/twelve-content-framework/`.
 - **S1-001 / S1-002 / S1-010 / S1-011 / S1-012**: option docs drafted in
   `design/decisions/` for the owners to choose from. No decisions made.
-- Added Unity CLI setup tooling (`tools/unity-cli/`) and CI
-  (`.github/workflows/`). Rewrote the top-level README for La Rasa.
+- Added Unity CLI setup tooling (`tools/unity-cli/`), a `repo-validation` CI
+  check, a team handbook + per-person onboarding pages, and rewrote the
+  top-level README. Unity test CI is held as a template
+  (`tools/unity-cli/unity-tests.yml`) — off until there's a license.
 - **Still the critical blocker**: no one has done the S1-003 Editor pass, which
   gates S1-004, S1-005, S1-006-completion.
 

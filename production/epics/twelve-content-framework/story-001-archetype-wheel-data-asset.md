@@ -124,7 +124,7 @@ pre-cutoff APIs.
 
 **Story Type**: Logic
 **Required evidence**: `Assets/LaRasa/Tests/EditMode/TwelveContent/ArchetypeWheelTests.cs`
-— must exist and pass in the Unity Test Runner / `game-ci` EditMode run.
+— must exist and pass in the Unity Test Runner (EditMode).
 
 **Status**: [x] Test file drafted — [ ] executed green in an Editor / CI (blocked on `S1-003`)
 

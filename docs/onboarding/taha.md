@@ -26,10 +26,11 @@
 1. **`S1-003`** — do the Unity Editor verification pass:
    `Assets/LaRasa/README.md` checklist. This unblocks Luka, Oasis, and the
    Twelve Content Framework tests.
-2. Wire the GitHub Actions secrets (`UNITY_LICENSE` / `UNITY_EMAIL` /
-   `UNITY_PASSWORD`) — `tools/unity-cli/README.md`, or the activation flow.
-3. Get the team onto Claude Code seats + walk them through
+2. Get the team onto Claude Code seats + walk them through
    `docs/TEAM-HANDBOOK.md`.
+3. *(optional, later)* Enable Unity CI — copy `tools/unity-cli/unity-tests.yml`
+   into `.github/workflows/` and add the license secrets. Skip until the
+   project is Editor-verified; a red CI on every push helps no one.
 4. Decide `network-programmer`'s fate (co-op or not — `game-concept.md` says
    single-player; flag it in an ADR if that's final so the agent goes dormant).
 

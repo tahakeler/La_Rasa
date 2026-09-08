@@ -90,9 +90,11 @@ A runbook and a read-only readiness check now live at `tools/unity-cli/`:
   missing. Changes nothing.
 - `.mcp.json.example` (repo root) — copy to `.mcp.json` (git-ignored) to wire
   MCP mode into Claude Code.
-- `.github/workflows/unity-tests.yml` — the authoritative CI test gate
-  (`game-ci/unity-test-runner`); the `unity` CLI is the experimental local
-  equivalent.
+- `tools/unity-cli/unity-tests.yml` — a `game-ci/unity-test-runner` workflow
+  template, **not active** (it needs a Unity license secret + a verified
+  project or it fails red). Copy it into `.github/workflows/` when ready —
+  steps in `tools/unity-cli/README.md`. For now, run tests locally in the
+  Editor's Test Runner.
 
 ### Local status — last checked 2026-09-08
 

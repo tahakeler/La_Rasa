@@ -79,9 +79,20 @@ unity command --project-path . \
   --exec 'TestRunnerApi.RunEditModeTests()'   # exact invocation: check `unity command --help`
 ```
 
-The authoritative CI path is `game-ci/unity-test-runner` (see
-`.github/workflows/unity-tests.yml`); the `unity` CLI route above is the
-experimental local equivalent.
+### GitHub CI (optional, not active)
+
+There is no Unity workflow in `.github/workflows/` — without a `UNITY_LICENSE`
+secret and an Editor-verified project, every run fails red. Run the EditMode
+suite locally in Unity's Test Runner instead.
+
+When you do want CI:
+
+1. Copy `tools/unity-cli/unity-tests.yml` → `.github/workflows/unity-tests.yml`.
+2. Get a free Personal license file: add a one-off workflow that runs
+   `game-ci/unity-request-activation-file@v2`, download the `.alf` artifact,
+   upload it at <https://license.unity3d.com/manual>, download the `.ulf`.
+3. Add repo secrets: `UNITY_LICENSE` = full contents of the `.ulf`,
+   `UNITY_EMAIL`, `UNITY_PASSWORD`. Delete the one-off activation workflow.
 
 ## 5. Live agent↔Editor bridge (`com.unity.pipeline`)
 

@@ -80,7 +80,7 @@ production/
   session-state/         active.md — the living checkpoint (gitignored)
 prototypes/painting-scene/  the read-accuracy prototype (never migrated to src)
 tools/unity-cli/         Unity CLI setup + agent↔Editor bridge (experimental)
-.github/workflows/       unity-tests (game-ci) + repo-validation
+.github/workflows/       repo-validation (JSON / frontmatter / bash checks)
 .claude/                 the studio: 49 agents, 73 skills, 12 hooks, 11 rules
 ```
 
