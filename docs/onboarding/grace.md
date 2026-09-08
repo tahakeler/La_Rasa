@@ -35,5 +35,6 @@ artists.
 
 - Twelve villagers each sit in a fixed wheel **colour** — build that into the
   character palettes from the start (`twelve-content-framework.md`).
-- Deliver into `assets/`; a programmer imports to `Assets/LaRasa/Art` with
-  `.meta` files. Big source files will move to Git LFS.
+- Hand exports to a programmer, who imports them to `Assets/LaRasa/Art` with
+  `.meta` files. Keep layered sources on a shared drive; big committed files
+  move to Git LFS.

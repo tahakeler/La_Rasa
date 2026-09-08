@@ -37,5 +37,6 @@ across the whole project.
 
 - Repeated cross-portrait details need to be planned across all twelve
   *before* final painting (TR-narrative-002) — coordinate with Non/Jack.
-- Deliver exports into `assets/` (sources) and let a programmer import them to
-  `Assets/LaRasa/Art` and commit the `.meta` files.
+- Hand exports to a programmer, who imports them to `Assets/LaRasa/Art` and
+  commits the `.meta` files. Keep your layered painting files on a shared
+  drive, not in the repo.

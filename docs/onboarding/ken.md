@@ -42,5 +42,5 @@ album.
   whole point is lost" otherwise.
 - The painting scene reuses your keys: the selected villager's key resolves or
   thins live with the player's read accuracy.
-- Deliver audio into `assets/` (stems/DAW sources) + final exports for a
-  programmer to import to `Assets/LaRasa/Audio`.
+- Hand final audio exports to a programmer to import to `Assets/LaRasa/Audio`.
+  Keep stems and DAW projects on a shared drive, not in the repo.

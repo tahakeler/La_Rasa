@@ -62,10 +62,13 @@ Assets/LaRasa/
 - **Editor tooling** → `Assets/LaRasa/Scripts/Editor/` or a sibling `Editor/`
   folder inside a feature folder.
 - **Tests** → `Assets/LaRasa/Tests/EditMode/` and `Assets/LaRasa/Tests/PlayMode/`.
-  The framework's `tests/` convention (`tests/unit/<system>/`) is satisfied by
-  these asmdef-scoped folders — see `tests/README.md`.
+  Unity's Test Runner and `game-ci` discover tests by `.asmdef`, not by
+  directory — so there is no top-level `tests/` folder; the framework's
+  `tests/unit/<system>/` convention maps to these asmdef-scoped folders.
 - **Data assets** (ScriptableObjects) → `Assets/LaRasa/Data/<system>/`.
 - **Art / audio / prefabs** → `Assets/LaRasa/Art`, `/Audio`, `/Prefabs`.
+  Source art/audio (PSDs, DAW files) belongs on a shared drive or Git LFS,
+  not committed as loose binaries.
 
 ## The painting-scene prototype
 

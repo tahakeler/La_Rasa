@@ -106,10 +106,11 @@ You need **2.1 only**. See [Who needs what](#3-who-needs-what).
 | **Grace** | Character-art pod lead, consistent aesthetic | ✅ (for docs) | ❌ | Claude Code for art-bible / specs; art delivered as files |
 | **Ken** | OST — twelve tracks, circle-of-fifths keys | ✅ (for docs) | ❌ | Claude Code for keys/crossfade strategy; composes in a DAW; hands over audio files |
 
-**Art & audio delivery:** put finished assets in `assets/` (authoring sources)
-and hand exports to a programmer, who imports them into `Assets/LaRasa/Art` or
-`/Audio` and commits them (with `.meta` files). Once binaries get large, we'll
-turn on Git LFS — the patterns are pre-written in `.gitignore`.
+**Art & audio delivery:** hand finished exports to a programmer, who imports
+them into `Assets/LaRasa/Art` or `/Audio` and commits them (with `.meta`
+files). Keep layered sources (PSDs, DAW projects) on a shared drive — not
+committed as loose binaries. Once committed art/audio gets large we'll turn on
+Git LFS; the patterns are pre-written in `.gitignore`.
 
 ---
 
